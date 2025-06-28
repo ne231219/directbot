@@ -10,7 +10,7 @@ module.exports = (robot) => {
         console.log('path: ' + path);
         let image = await Jimp.read(path);
         image.blur(7);
-        await image.write(__dirname + '/../images/' + newFileName);
+        await image.write('images/' + newFileName);
         res.send({
           path: 'images/' + newFileName
         });
